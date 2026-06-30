@@ -505,10 +505,11 @@ if data:
         with chat_container:
             for message in st.session_state.messages:
                 bubble_class = "chat-user" if message["role"] == "user" else "chat-assistant"
+                formatted_content = message["content"].replace('\n', '<br/>')
                 st.markdown(f"""
                 <div class="chat-bubble {bubble_class}">
                     <b>{"You" if message["role"] == "user" else "Gemini Advisor"}:</b><br/>
-                    {message["content"].replace('\n', '<br/>')}
+                    {formatted_content}
                 </div>
                 """, unsafe_allow_html=True)
 

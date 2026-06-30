@@ -1,3 +1,4 @@
 # Test-specific dependencies
 pytest
 coverage
+pytest>=8.0.0

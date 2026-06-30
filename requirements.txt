@@ -15,4 +15,4 @@ requests==2.32.3
 python-dotenv==1.0.1
 db-dtypes==1.2.0
 matplotlib>=3.8.0
-pytest
+pytest>=8.0.0

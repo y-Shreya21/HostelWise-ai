@@ -1,0 +1,3 @@
+# Test-specific dependencies
+pytest
+coverage

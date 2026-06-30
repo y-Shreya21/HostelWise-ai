@@ -1,0 +1,32 @@
+{
+    "gpu_detected": false,
+    "gpu_device_name": "No NVIDIA GPU / cuDF Detected (Running in Simulation Mode)",
+    "timestamp": "2026-06-30 10:36:24",
+    "benchmarks": [
+        {
+            "data_volume_rows": 100000,
+            "cleaned_rows": 100000,
+            "cpu_time_seconds": 0.3861,
+            "gpu_time_seconds": 0.0262,
+            "speedup": 14.72
+        },
+        {
+            "data_volume_rows": 500000,
+            "cleaned_rows": 499999,
+            "cpu_time_seconds": 1.5858,
+            "gpu_time_seconds": 0.0672,
+            "speedup": 23.61
+        },
+        {
+            "data_volume_rows": 1000000,
+            "cleaned_rows": 999987,
+            "cpu_time_seconds": 3.4027,
+            "gpu_time_seconds": 0.098,
+            "speedup": 34.72
+        }
+    ],
+    "average_speedup": 24.35,
+    "total_cpu_time_seconds": 5.3746,
+    "total_gpu_time_seconds": 0.1914,
+    "total_time_saved_seconds": 5.1832
+}

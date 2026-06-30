@@ -1,0 +1,4 @@
+data_volume_rows,cleaned_rows,cpu_time_seconds,gpu_time_seconds,speedup
+100000,100000,0.3861,0.0262,14.72
+500000,499999,1.5858,0.0672,23.61
+1000000,999987,3.4027,0.098,34.72

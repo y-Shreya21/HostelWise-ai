@@ -160,9 +160,9 @@ def get_dashboard_data():
         recs = recommendation_service.get_recommendations(df, budget)
         
         if 'week' in weekly_df.columns:
-            weekly_df['week'] = weekly_df['week'].dt.strftime('%Y-%m-%d')
+            weekly_df['week'] = pd.to_datetime(weekly_df['week']).dt.strftime('%Y-%m-%d')
         if 'day' in daily_df.columns:
-            daily_df['day'] = daily_df['day'].dt.strftime('%Y-%m-%d')
+            daily_df['day'] = pd.to_datetime(daily_df['day']).dt.strftime('%Y-%m-%d')
             
         data = {
             "kpis": kpis,
@@ -434,7 +434,7 @@ if data:
                 month_df = df_exp[(df_exp['date'] >= start_of_month) & (df_exp['date'] <= end_of_day)]
                 
                 if len(month_df) > 0:
-                    month_df['day'] = month_df['date'].dt.day
+                    month_df['day'] = pd.to_datetime(month_df['date']).dt.day
                     daily_cum = month_df.groupby('day')['amount'].sum().reset_index()
                     days_in_month = pd.Period(datetime.now().strftime('%Y-%m')).days_in_month
                     

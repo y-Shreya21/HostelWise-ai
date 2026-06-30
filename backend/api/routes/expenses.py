@@ -119,9 +119,9 @@ def get_dashboard_summary(
         
         # Date formatting for JSON compatibility
         if 'week' in weekly_df.columns:
-            weekly_df['week'] = weekly_df['week'].dt.strftime('%Y-%m-%d')
+            weekly_df['week'] = pd.to_datetime(weekly_df['week']).dt.strftime('%Y-%m-%d')
         if 'day' in daily_df.columns:
-            daily_df['day'] = daily_df['day'].dt.strftime('%Y-%m-%d')
+            daily_df['day'] = pd.to_datetime(daily_df['day']).dt.strftime('%Y-%m-%d')
             
         return DashboardResponse(
             kpis=DashboardKPIs(**kpis),
